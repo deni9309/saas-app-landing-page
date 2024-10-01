@@ -6,7 +6,7 @@ import { cn } from '../../lib/utils'
 const NavLink = ({ title }) => (
   <LinkScroll
     to="#"
-    className="base-bold text-p4 uppercase transition-colors duration-200 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
+    className="base-bold text-p4 uppercase transition-colors duration-300 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
   >
     {title}
   </LinkScroll>

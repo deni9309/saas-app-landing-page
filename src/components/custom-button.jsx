@@ -14,7 +14,7 @@ const CustomButton = ({
     <>
       <span className="relative flex items-center min-h-[60px] px-4 g4 rounded-2xl inner-before group-hover:before:opacity-100 overflow-hidden">
         <span className="absolute -left-[1px]">
-          <Marker />
+          <Marker markerFill={markerFill} />
         </span>
         {icon && (
           <img
