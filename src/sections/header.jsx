@@ -1,25 +1,55 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link as LinkScroll } from 'react-scroll'
 
-import { cn } from '../../lib/utils'
-
-const NavLink = ({ title }) => (
-  <LinkScroll
-    to="#"
-    className="base-bold text-p4 uppercase transition-colors duration-300 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
-  >
-    {title}
-  </LinkScroll>
-)
+import { cn } from '../lib/utils'
 
 const Header = () => {
+  const [hasScrolled, setHasScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 32)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  const NavLink = ({ title }) => (
+    <LinkScroll
+      to={title}
+      onClick={() => setIsOpen(false)}
+      offset={-100}
+      smooth
+      spy
+      activeClass="nav-active"
+      className="base-bold text-p4 uppercase transition-colors duration-300 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
+    >
+      {title}
+    </LinkScroll>
+  )
+
   return (
-    <header className="fixed w-full py-10 top-0 left-0 z-50">
+    <header
+      className={cn(
+        'fixed top-0 left-0 z-50 w-full transition-all duration-500 max-lg:py-4 py-10',
+        hasScrolled && 'py-2 bg-black-100 backdrop-blur-[8px]',
+      )}
+    >
       <div className="container flex items-center max-lg:px-5 h-14">
-        <a href="#" className="lg:hidden flex-1 cursor-pointer z-2">
+        <LinkScroll
+          to="hero"
+          spy
+          smooth
+          offset={-240}
+          className="lg:hidden flex-1 cursor-pointer z-2"
+        >
           <img src="/images/xora.svg" alt="Xora Logo" width={115} height={55} />
-        </a>
+        </LinkScroll>
 
         <div
           className={cn(
@@ -39,7 +69,7 @@ const Header = () => {
                 <li className="nav-logo">
                   <LinkScroll
                     to="hero"
-                    offset={-100}
+                    offset={-240}
                     spy
                     smooth
                     className={cn(
