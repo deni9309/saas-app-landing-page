@@ -40,19 +40,19 @@ const Features = () => {
             ))}
 
             <ul className="relative flex flex-grow justify-around px-[5%] border-2 border-s3 rounded-7xl max-md:hidden">
-              <div className="absolute z-10 bg-s3/20 top-[38%] left-0 right-0 w-full h-[1px]" />
+              <div className="absolute z-10 bg-s3/30 top-[38%] left-0 right-0 w-full h-[1px]" />
               {details.map((detail) => (
                 <li key={detail.id} className="relative pt-16 px-4 pb-14">
-                  <div className="absolute top-8 bottom-0 left-1/2 bg-s3/20 w-[1px] h-full z-10" />
+                  <div className="absolute top-8 bottom-0 left-1/2 bg-s3/30 w-[1px] h-full z-10" />
                   <div className="flex items-center justify-center mx-auto mb-3 border-2 border-s2 rounded-full hover:border-s4 transition-all duration-[400ms] shadow-500 size-20">
                     <img
                       src={detail.icon}
                       alt={detail.title}
-                      className="size-17/20 object-contain z-20"
+                      className="size-17/20 object-contain z-50"
                     />
                   </div>
 
-                  <h3 className="relative z-2 text-center base-small uppercase max-w-36 mx-auto my-0">
+                  <h3 className="relative z-50 text-center base-small uppercase max-w-36 mx-auto my-0">
                     {detail.title}
                   </h3>
                 </li>
