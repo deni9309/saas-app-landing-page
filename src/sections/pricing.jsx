@@ -18,7 +18,7 @@ const Pricing = () => {
               Flexible pricing for teams of all sizes
             </h3>
 
-            <div className="relative z-4 mx-auto flex w-[375px] rounded-3xl border-[3px] border-s4/25 bg-s1/50 p-2 backdrop-blur-[6px] max-md:w-[310px]">
+            <div className="relative z-4 mx-auto flex w-[375px] rounded-3xl border-[3px] border-s4/25 bg-s1/50 p-2 backdrop-blur-[6px] max-md:max-w-[310px] max-md:w-full">
               <button
                 onClick={() => setMonthly(true)}
                 className={cn('pricing-head_btn', monthly && 'text-p4')}
@@ -59,11 +59,11 @@ const Pricing = () => {
           </div>
 
           {/* Start of Pricing plans */}
-          <div className="flex-wrap max-lg:gap-x-6 max-lg:gap-y-9 justify-center lg:flex-nowrap scroll-hide relative z-2 -mt-12 flex items-start max-lg:items-end max-xl:overflow-auto max-xl:pt-6">
+          <div className="flex-wrap max-lg:gap-x-6 max-lg:gap-y-9 max-md:gap-y-10 justify-center lg:flex-nowrap relative z-2 -mt-12 flex items-start max-lg:items-end max-xl:pt-6">
             {plans.map((plan, index) => (
               <div
                 key={plan.id}
-                className="pricing-plan_first pricing-plan_last pricing-plan_odd pricing-plan_even relative border-2 p-7 max-xl:min-w-[310px] max-lg:rounded-3xl xl:w-[calc(33.33%+2px)]"
+                className="pricing-plan_first pricing-plan_last pricing-plan_odd pricing-plan_even relative border-2 p-7 max-sm:min-w-[200px] max-xl:min-w-[310px] max-lg:rounded-3xl xl:w-[calc(33.33%+2px)]"
               >
                 {index === 1 && (
                   <div className="g4 absolute h-330 left-0 right-0 top-0 z-1 rounded-tl-3xl rounded-tr-3xl" />
