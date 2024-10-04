@@ -58,7 +58,7 @@ const Pricing = () => {
             </div>
           </div>
 
-          {/* Start of Pricing plans */}
+          {/* -- Start of Pricing plans -- */}
           <div className="flex-wrap max-lg:gap-x-6 max-lg:gap-y-9 max-md:gap-y-10 justify-center lg:flex-nowrap relative z-2 -mt-12 flex items-start max-lg:items-end max-xl:pt-6">
             {plans.map((plan, index) => (
               <div

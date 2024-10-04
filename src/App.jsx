@@ -4,6 +4,7 @@ import Header from './sections/header'
 import Pricing from './sections/pricing'
 import Faq from './sections/faq'
 import Testimonials from './sections/testimonials'
+import Download from './sections/download'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Pricing />
       <Faq />
       <Testimonials />
+      <Download />
     </main>
   )
 }
