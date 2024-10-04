@@ -1,10 +1,11 @@
-import Features from './sections/features'
-import Hero from './sections/hero'
-import Header from './sections/header'
-import Pricing from './sections/pricing'
-import Faq from './sections/faq'
-import Testimonials from './sections/testimonials'
 import Download from './sections/download'
+import Faq from './sections/faq'
+import Features from './sections/features'
+import Footer from './sections/footer'
+import Header from './sections/header'
+import Hero from './sections/hero'
+import Pricing from './sections/pricing'
+import Testimonials from './sections/testimonials'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Faq />
       <Testimonials />
       <Download />
+      <Footer />
     </main>
   )
 }

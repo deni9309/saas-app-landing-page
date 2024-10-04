@@ -34,6 +34,7 @@ const Download = () => {
                   >
                     <a
                       href={url}
+                      target='_blank'
                       className="relative download_tech-icon_before flex items-center justify-center size-22 rounded-half border-2 border-s3 bg-s1 transition-borderColor duration-[400ms]"
                     >
                       <span className="absolute -top-2 rotate-90">

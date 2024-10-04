@@ -379,25 +379,25 @@ export const links = [
     id: '0',
     title: 'Ios',
     icon: <Ios />,
-    url: '#',
+    url: 'https://www.apple.com/ios/ios-18/',
   },
   {
     id: '1',
     title: 'Android',
     icon: <Android />,
-    url: '#',
+    url: 'https://www.android.com/',
   },
   {
     id: '2',
     title: 'Windows',
     icon: <Windows />,
-    url: '#',
+    url: 'https://www.microsoft.com/en-us/windows?r=1',
   },
   {
     id: '3',
     title: 'Web',
     icon: <Web />,
-    url: '#',
+    url: 'https://webfoundation.org/',
   },
 ]
 
@@ -406,24 +406,24 @@ export const socials = [
     id: '0',
     title: 'x',
     icon: '/images/socials/x.svg',
-    url: '#',
+    url: 'https://x.com/?lang=en',
   },
   {
     id: '1',
     title: 'Threads',
     icon: '/images/socials/threads.svg',
-    url: '#',
+    url: 'https://www.threads.net/?hl=en',
   },
   {
     id: '2',
     title: 'Instagram',
     icon: '/images/socials/instagram.svg',
-    url: '#',
+    url: 'https://www.instagram.com/',
   },
   {
     id: '3',
     title: 'Discord',
     icon: '/images/socials/discord.svg',
-    url: '#',
+    url: 'https://discord.com/',
   },
 ]
